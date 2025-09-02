@@ -352,6 +352,156 @@ footer p {
     opacity: 0.9;
 }
 
+/* History Page Styles */
+.history-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: linear-gradient(145deg, rgba(61, 79, 62, 0.9), rgba(74, 95, 75, 0.8));
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(44, 62, 45, 0.3);
+    border: 2px solid rgba(127, 176, 105, 0.2);
+}
+
+.prose {
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.prose h2 {
+    color: var(--accent-color);
+    font-size: 2.2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.prose h2::after {
+    display: none; /* Remove the centered underline for history headers */
+}
+
+.prose h2:first-of-type {
+    margin-top: 0;
+}
+
+.prose h3 {
+    color: var(--sky-blue);
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.prose p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    text-indent: 2rem;
+}
+
+.prose p:first-letter {
+    font-size: 3.5rem;
+    font-weight: 700;
+    float: left;
+    line-height: 1;
+    margin: 0.1rem 0.7rem 0 0;
+    color: var(--accent-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.history-quote {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-left: 6px solid var(--accent-color);
+    padding: 2rem;
+    margin: 3rem 0;
+    border-radius: 15px;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--sky-blue);
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(44, 62, 45, 0.3);
+    position: relative;
+}
+
+.history-quote::before {
+    content: '"';
+    font-size: 4rem;
+    color: var(--accent-color);
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-family: Georgia, serif;
+}
+
+.history-quote::after {
+    content: '"';
+    font-size: 4rem;
+    color: var(--accent-color);
+    position: absolute;
+    bottom: -30px;
+    right: 20px;
+    font-family: Georgia, serif;
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 80px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--accent-color), var(--sky-blue));
+    border-radius: 2px;
+}
+
+.timeline li {
+    margin-bottom: 1.5rem;
+    padding-left: 120px;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.timeline li span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(135deg, var(--accent-color), var(--leaf-green));
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(127, 176, 105, 0.3);
+    min-width: 60px;
+    text-align: center;
+}
+
+.timeline li::before {
+    content: '🌟';
+    position: absolute;
+    left: 70px;
+    top: 5px;
+    font-size: 1.2rem;
+    background: var(--primary-color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--accent-color);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     nav {
@@ -384,5 +534,62 @@ footer p {
     section {
         padding: 3rem 1.5rem;
         margin: 1rem;
+    }
+    
+    /* History Page Mobile Styles */
+    .history-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .prose p {
+        text-indent: 1rem;
+        font-size: 1rem;
+    }
+    
+    .prose p:first-letter {
+        font-size: 2.5rem;
+        margin-right: 0.4rem;
+    }
+    
+    .prose h2 {
+        font-size: 1.8rem;
+    }
+    
+    .prose h3 {
+        font-size: 1.3rem;
+    }
+    
+    .timeline {
+        padding-left: 0;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline li {
+        padding-left: 60px;
+    }
+    
+    .timeline li span {
+        position: relative;
+        left: -60px;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+    }
+    
+    .timeline li::before {
+        left: 10px;
+    }
+    
+    .history-quote {
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .history-quote::before,
+    .history-quote::after {
+        font-size: 2.5rem;
     }
 }
