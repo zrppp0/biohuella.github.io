@@ -17,6 +17,7 @@
                 <li><a href="conservacion.html">🌿 Conservación</a></li>
                 <li><a href="Historia.html">♾️ Historia</a></li>
                 <li><a href="biodiversidad.html">🌺 Biodiversidad</a></li>
+                <li><a href="#ai-consultant">🤖 Consultor IA</a></li>
                 <li><a href="iniciativas.html">🌱 Iniciativas</a></li>
                 <li><a href="tecnologia-verde.html">🔬 Tecnología Verde</a></li>
                 <li><a href="agricultura-urbana.html">🌾 Agricultura Urbana</a></li>
@@ -97,6 +98,47 @@
             </div>
             <div style="text-align: center; margin-top: 2rem;">
                 <a href="biodiversidad.html" style="background: linear-gradient(135deg, var(--accent-color), var(--leaf-green)); color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600; display: inline-block; transition: var(--transition);">🌺 Explorar Biodiversidad →</a>
+            </div>
+        </section>
+
+        <section id="ai-consultant">
+            <h2>🤖 Asistente IA</h2>
+            <div class="ai-chat-container">
+                <div class="ai-description">
+                    <p>¡Pregunta cualquier cosa! Soy un asistente de IA que puede ayudarte con plantas, jardinería, agricultura, ciencias, tecnología, y muchos otros temas. ¡Empécemos a conversar!</p>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message ai-message">
+                        <div class="message-avatar">🌱</div>
+                        <div class="message-content">
+                            <p>¡Hola! Soy tu asistente de IA y puedo ayudarte con una gran variedad de temas. Pregunta sobre:</p>
+                            <ul>
+                                <li>🌱 Plantas, jardinería y agricultura</li>
+                                <li>🔬 Ciencia y tecnología</li>
+                                <li>🌍 Medio ambiente y sostenibilidad</li>
+                                <li>📚 Educación y aprendizaje</li>
+                                <li>🤔 ¡Cualquier otra duda que tengas!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <div class="input-wrapper">
+                        <input type="text" id="chatInput" placeholder="Escribe cualquier pregunta que tengas..." maxlength="500">
+                        <button id="sendButton" type="button">
+                            <span class="send-icon">🚀</span>
+                            <span class="send-text">Enviar</span>
+                        </button>
+                    </div>
+                    <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                        <span>🌱 El consultor está pensando...</span>
+                        <div class="typing-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
